@@ -1,0 +1,583 @@
+/* ========================================= */
+/* BASE E CONFIGURAÇÃO GLOBAL */
+/* ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+  }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Fundo geral claro */
+    color: #343a40; /* Cor de texto principal escuro */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========================================= */
+/* NAV-BAR (HEADER) */
+/* ========================================= */
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Centraliza o navbar-container */
+    align-items: center;
+    background-color: #ffffff; /* Fundo do cabeçalho */
+    padding: 15px 0; /* Padding vertical, horizontal é controlado pelo container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px; /* Largura do conteúdo principal */
+    padding: 0 30px; /* Padding horizontal interno para o container */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #007bff; /* Azul Conecta Edital */
+}
+
+.navbar-left .logo img {
+    margin-right: 10px;
+    border-radius: 4px;
+    max-width: 70%; /* Ajustado para o logo */
+}
+
+.navbar-center ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-center ul li a {
+    display: flex;
+    align-items: center;
+    color: #6c757d; /* Cinza para textos secundários */
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-center ul li a:hover,
+.navbar-center ul li a.active {
+    color: #007bff; /* Azul Conecta Edital */
+    transform: scale(1.05); /* Aumenta o tamanho em 5% */
+}
+
+.navbar-center ul li a i {
+    margin-right: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-center ul li a:hover i,
+.navbar-center ul li a.active i {
+    transform: scale(1.1); /* Ícone aumenta um pouco mais que o texto */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right .notification-icon {
+    font-size: 1.2rem;
+    color: #6c757d;
+    position: relative;
+    padding: 5px;
+}
+
+.navbar-right .user-menu {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 5px 15px 5px 5px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.navbar-right .user-avatar {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.navbar-right .user-menu span {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.navbar-right .user-menu i {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+
+/* ========================================= */
+/* PÁGINA DE SUPORTE - CONTEÚDO PRINCIPAL */
+/* ========================================= */
+
+.suporte-content {
+    flex-grow: 1;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaço entre as seções */
+    max-width: 1440px; /* Largura padrão dos conteúdos principais */
+    margin: 30px auto;
+}
+
+/* Header do Card de Suporte (Central de Suporte) */
+.support-header-card {
+    display: flex;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda e o botão no topo */
+    justify-content: space-between; /* Espaça o bloco de conteúdo esquerdo e o botão */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.support-header-info {
+    display: flex;
+    flex-direction: column; /* Empilha o título e o subtítulo */
+    text-align: left; /* Alinha o texto à esquerda */
+    flex-grow: 1; /* Permite que este contêiner ocupe o espaço disponível */
+}
+
+.support-header-card .title-wrapper { /* Agrupa o ícone e o título H2 */
+    display: flex;
+    align-items: center; /* Alinha o ícone e o H2 horizontalmente */
+    gap: 15px; /* Espaço entre o ícone e o H2 */
+    margin-bottom: 5px; /* Espaço entre o título e o subtítulo */
+}
+
+.support-header-card .icon-header-wrapper {
+    background: linear-gradient(135deg, #3a68ff, #0427c1); /* Gradiente azul do ícone */
+    color: white; /* Cor do ícone */
+    border-radius: 11px; /* Cantos arredondados */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    flex-shrink: 0; /* Impede que o ícone encolha */
+}
+
+.support-header-card h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.support-header-card p.subtitle { /* Seletor para o subtítulo */
+    font-size: 0.8rem; /* Ajustado para 0.8rem como na imagem */
+    color: #6c757d;
+    margin-left: 85px;
+    margin-top: -10px;
+    text-align: left;
+}
+
+.btn-new-chamado {
+    margin-top: 20px;
+    margin-left: 60px;
+    background-color: #0427c1; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0; /* Impede que o botão encolha */
+    /* Removido o margin-left: 130px; que estava causando desalinhamento */
+}
+.btn-new-chamado:hover {
+    background-color: #0056b3;
+}
+
+/* Filter and Search Section */
+.filter-search-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.search-bar {
+    position: relative;
+    flex-grow: 1;
+    min-width: 250px;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #343a40;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+.search-bar input:focus {
+    border-color: #007bff;
+}
+
+.filter-dropdowns {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    min-width: 150px;
+}
+
+.dropdown-toggle {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.dropdown-toggle:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+.dropdown-toggle i {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+.dropdown-toggle.active i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    padding: 10px 0;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+}
+.dropdown-menu.show {
+    display: flex;
+}
+
+/* Estilos para a opção "Todos/Todas" sem checkbox */
+.dropdown-menu label.select-all-option {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    color: #343a40;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+}
+.dropdown-menu label.select-all-option:hover {
+    background-color: #f0f0f0;
+}
+/* Estilo para quando a opção "Todos/Todas" está ativa */
+.dropdown-menu label.select-all-option.active-option {
+    background-color: #e3f2fd;
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Ajuste no estilo da label padrão para garantir que os inputs tenham a margem correta */
+.dropdown-menu label {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    color: #343a40;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.dropdown-menu label input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #007bff;
+}
+
+
+/* No Tickets Message Section */
+.no-tickets-message {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 60px 30px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icon-no-tickets-wrapper {
+  
+    color: #6c757d;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.no-tickets-message h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.no-tickets-message p {
+    font-size: 1rem;
+    color: #6c757d;
+    max-width: 600px;
+}
+
+.btn-create-first-ticket {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-create-first-ticket:hover {
+    background-color: #0056b3;
+}
+
+
+/* ========================================= */
+/* RESPONSIVIDADE */
+/* ========================================= */
+@media (max-width: 1440px) {
+    .navbar-container,
+    .suporte-content {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-container,
+    .suporte-content {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .suporte-content {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    .support-header-card { /* Ajustado para responsividade */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .support-header-card .title-wrapper {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .support-header-card h2 {
+        font-size: 1.5rem;
+    }
+    .support-header-card p.subtitle {
+        font-size: 0.9rem;
+    }
+    .btn-new-chamado {
+        width: 100%;
+        justify-content: center;
+    }
+    .filter-search-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .search-bar {
+        min-width: unset;
+    }
+    .filter-dropdowns {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .dropdown-container {
+        width: 100%;
+    }
+    .dropdown-menu {
+        min-width: 100%;
+    }
+    .no-tickets-message {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .suporte-content {
+        padding: 20px 15px;
+    }
+    .navbar-center ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    .navbar-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .support-header-card .icon-header-wrapper {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+    .support-header-card h2 {
+        font-size: 1.3rem;
+    }
+    .support-header-card p.subtitle {
+        font-size: 0.8rem;
+    }
+    .btn-new-chamado {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .search-bar input {
+        font-size: 0.9rem;
+        padding: 10px 15px 10px 40px;
+    }
+    .dropdown-toggle {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .dropdown-menu label {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    .icon-no-tickets-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 2.2rem;
+    }
+    .no-tickets-message h3 {
+        font-size: 1.3rem;
+    }
+    .no-tickets-message p {
+        font-size: 0.9rem;
+    }
+    .btn-create-first-ticket {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .support-header-card .title-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .support-header-card .icon-header-wrapper {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .support-header-card h2 {
+        font-size: 1.1rem;
+    }
+}

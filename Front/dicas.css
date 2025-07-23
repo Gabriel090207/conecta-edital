@@ -1,0 +1,517 @@
+/* ========================================= */
+/* CSS do HEADER - Copiado DIRETAMENTE para dicas.css */
+/* ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+  }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 30px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.navbar-left .logo img {
+    margin-right: 10px;
+    border-radius: 4px;
+    max-width: 70%; /* Ajustado para o logo */
+}
+
+.navbar-center ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-center ul li a {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-center ul li a:hover,
+.navbar-center ul li a.active {
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+.navbar-center ul li a i {
+    margin-right: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.navbar-center ul li a:hover i,
+.navbar-center ul li a.active i {
+    transform: scale(1.1);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right .notification-icon {
+    font-size: 1.2rem;
+    color: #6c757d;
+    position: relative;
+    padding: 5px;
+}
+
+.navbar-right .user-menu {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 5px 15px 5px 5px;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.navbar-right .user-avatar {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.navbar-right .user-menu span {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.navbar-right .user-menu i {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* ========================================= */
+/* FIM do CSS do HEADER */
+/* ========================================= */
+
+
+/* ========================================= */
+/* CSS ESPECÍFICO DA PÁGINA DE DICAS */
+/* ========================================= */
+
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1440px; /* Largura ajustada para ser mais larga */
+    margin: 30px auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Central Knowledge Header Card */
+.knowledge-center-header {
+    display: flex;
+    align-items: center;
+}
+
+.knowledge-center-header .icon-wrapper {
+    background-color: #f29100;
+    color: white;
+    border-radius: 20%; /* Circular como na imagem */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 20px;
+}
+
+.knowledge-center-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 5px;
+}
+
+.knowledge-center-header p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #343a40;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #e9ecef;
+    color: #495057;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.filter-btn i {
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    opacity: 0.9;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Cores específicas para cada tag do filtro */
+.filter-btn.tag-geral {
+    background-color: #e0f7fa; /* Light cyan */
+    color: #00838f; /* Dark cyan */
+}
+.filter-btn.tag-geral.active {
+    background-color: #00838f;
+    color: white;
+}
+
+.filter-btn.tag-monitoramento {
+    background-color: #e3f2fd; /* Light blue */
+    color: #1976d2; /* Dark blue */
+}
+.filter-btn.tag-monitoramento.active {
+    background-color: #1976d2;
+    color: white;
+}
+
+.filter-btn.tag-estudos {
+    background-color: #e8f5e9; /* Light green */
+    color: #388e3c; /* Dark green */
+}
+.filter-btn.tag-estudos.active {
+    background-color: #388e3c;
+    color: white;
+}
+
+.filter-btn.tag-notificacao {
+    background-color: #fffde7; /* Light yellow */
+    color: #fbc02d; /* Dark yellow */
+}
+.filter-btn.tag-notificacao.active {
+    background-color: #fbc02d;
+    color: white;
+}
+
+.filter-btn.tag-avancado {
+    background-color: #f3e5f5; /* Light purple */
+    color: #8e24aa; /* Dark purple */
+}
+.filter-btn.tag-avancado.active {
+    background-color: #8e24aa;
+    color: white;
+}
+
+/* Estilos para as seções de conteúdo filtrado (abas) */
+.filter-content {
+    display: none; /* Escondido por padrão */
+    flex-direction: column; /* Organiza os cards internos em coluna */
+    gap: 20px; /* Espaço entre os cards dentro do conteúdo filtrado */
+    animation: fadeIn 0.5s ease-in-out; /* Adiciona um fade-in suave */
+}
+
+.filter-content.active-filter-content {
+    display: flex; /* Visível quando ativo */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mensagem de "Nenhum artigo encontrado" */
+.no-articles-message {
+    text-align: center;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+}
+
+.no-articles-message .icon-wrapper.large {
+    /* Corrigido para cinza padrão */
+    color: #6c757d; /* Corrigido para cinza padrão */
+    border-radius: 50%;
+    width: 80px; /* Grande */
+    height: 80px; /* Grande */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.no-articles-message h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #343a40;
+}
+
+.no-articles-message p {
+    font-size: 1rem;
+}
+
+/* Estilo para cards de exemplo de artigos (se houver) */
+.article-example {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+.article-example h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+.article-example p {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+
+/* Responsividade */
+@media (max-width: 1440px) {
+    .content {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+    .knowledge-center-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .knowledge-center-header .icon-wrapper {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .filter-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 15px;
+    }
+    .navbar-center ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    .navbar-right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .knowledge-center-header h1 {
+        font-size: 1.5rem;
+    }
+    .knowledge-center-header p {
+        font-size: 0.9rem;
+    }
+    .search-bar input {
+        padding: 10px 15px 10px 40px;
+        font-size: 0.9rem;
+    }
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+    .no-articles-message h2 {
+        font-size: 1.2rem;
+    }
+    .no-articles-message p {
+        font-size: 0.9rem;
+    }
+    .no-articles-message .icon-wrapper.large {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    .article-example h3 {
+        font-size: 1.1rem;
+    }
+    .article-example p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-left .logo {
+        font-size: 1rem;
+    }
+    .navbar-left .logo img {
+        width: 25px;
+        height: 25px;
+    }
+    .navbar-right .user-menu {
+        padding: 3px 10px 3px 3px;
+    }
+    .navbar-right .user-avatar {
+        width: 25px;
+        height: 25px;
+        font-size: 0.9rem;
+    }
+    .navbar-right .user-menu span {
+        font-size: 0.9rem;
+    }
+    .knowledge-center-header h1 {
+        font-size: 1.3rem;
+    }
+    .knowledge-center-header p {
+        font-size: 0.85rem;
+    }
+    .search-bar input {
+        padding: 8px 10px 8px 35px;
+        font-size: 0.85rem;
+    }
+    .filter-buttons {
+        gap: 8px;
+    }
+    .filter-btn {
+        padding: 5px 12px;
+        font-size: 0.75rem;
+    }
+    .no-articles-message h2 {
+        font-size: 1rem;
+    }
+    .no-articles-message p {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Edital - Central de Suporte</title>
+    <link rel="stylesheet" href="suporte.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <a href="index.html" class="logo">
+                    <img src="logo.png.png" alt="Logo Conecta Edital" style="max-width:70%;">
+                </a>
+            </div>
+            <nav class="navbar-center">
+                <ul>
+                    <li><a href="monitoramento.html"><i class="fas fa-tasks"></i> Meus monitoramentos</a></li>
+                    <li><a href="planos.html"><i class="fas fa-clipboard-list"></i> Planos</a></li>
+                    <li><a href="dicas.html"><i class="fas fa-lightbulb"></i> Dicas</a></li>
+                    <li><a href="suporte.html" class="active"><i class="fas fa-question-circle"></i> Suporte</a></li> <li><a href="ajuda.html"><i class="fas fa-info-circle"></i> Ajuda</a></li>
+                </ul>
+            </nav>
+            <div class="navbar-right">
+                <a href="#" class="notification-icon"><i class="fas fa-bell"></i></a>
+                <div class="user-menu">
+                    <span class="user-avatar">G</span>
+                    <span>Gabriel Borela</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="suporte-content">
+        <div class="support-header-card">
+            <div class="support-header-info">
+                <div class="title-wrapper"> <div class="icon-header-wrapper">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h2>Central de Suporte</h2>
+                </div>
+                <p class="subtitle">Abra e acompanhe seus chamados. Nossa equipe responderá por e-mail ou WhatsApp.</p>
+            </div>
+            <button class="btn-new-chamado" id="open-new-chamado-btn"><i class="fas fa-plus"></i> Abrir Novo Chamado</button>
+        </div>
+
+        <div class="filter-search-section">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar tickets por título, ID ou descrição...">
+            </div>
+            <div class="filter-dropdowns">
+                <div class="dropdown-container">
+                    <button class="dropdown-toggle" data-dropdown="status">
+                        Todos Status <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" data-dropdown-menu="status">
+                        <label class="select-all-option active-option" data-value="todos-status">Todos Status</label>
+                        <label><input type="checkbox" data-value="aguardando"> Aguardando</label>
+                        <label><input type="checkbox" data-value="em-atendimento"> Em Atendimento</label>
+                        <label><input type="checkbox" data-value="resolvido"> Resolvido</label>
+                        <label><input type="checkbox" data-value="pendente"> Pendente</label>
+                        <label><input type="checkbox" data-value="cancelado"> Cancelado</label>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <button class="dropdown-toggle" data-dropdown="categorias">
+                        Todas Categorias <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" data-dropdown-menu="categorias">
+                        <label class="select-all-option active-option" data-value="todas-categorias">Todas Categorias</label>
+                        <label><input type="checkbox" data-value="suporte-tecnico"> Suporte Técnico</label>
+                        <label><input type="checkbox" data-value="duvidas-gerais"> Dúvidas Gerais</label>
+                        <label><input type="checkbox" data-value="reclamacoes"> Reclamações</label>
+                        <label><input type="checkbox" data-value="feedback-sugestoes"> Feedback/Sugestões</label>
+                        <label><input type="checkbox" data-value="relatorio-bugs"> Relatório de Bugs</label>
+                        <label><input type="checkbox" data-value="solicitacoes"> Solicitações</label>
+                    </div>
+                </div>
+
+                <div class="dropdown-container">
+                    <button class="dropdown-toggle" data-dropdown="recente">
+                        Mais Recentes <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu" data-dropdown-menu="recente">
+                        <label class="select-all-option active-option" data-value="mais-recentes">Mais Recentes</label>
+                        <label><input type="checkbox" data-value="mais-antigos"> Mais Antigos</label>
+                        <label><input type="checkbox" data-value="titulo-az"> Título A-Z</label>
+                        <label><input type="checkbox" data-value="titulo-za"> Título Z-A</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-tickets-message">
+            <div class="icon-no-tickets-wrapper">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <h3>Nenhum Ticket Encontrado</h3>
+            <p>Você ainda não possui tickets abertos.</p>
+            <p>Se precisar de ajuda, abra um novo chamado.</p>
+          
+        </div>
+    </main>
+
+    <script src="suporte.js"></script>
+</body>
+</html>
