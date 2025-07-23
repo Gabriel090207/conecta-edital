@@ -47,10 +47,12 @@ origins = [
     "https://starling-valkyrie-zaaff3.netlify.app" 
 ]
 
+origins = ["*"] # MUDANÇA AQUI: permite todas as origens temporariamente
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    # allow_credentials=True, # REMOVA OU COMENTE ESTA LINHA
     allow_methods=["*"],
     allow_headers=["*"],
 )
